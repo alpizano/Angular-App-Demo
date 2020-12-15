@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   <p>
   Adding my template inline baby
   </p>`,
-  styleUrls: ['./test.component.css']
+  styles: [`h2 {
+    color: red;
+  }`]
 })
 export class TestComponent implements OnInit {
 
