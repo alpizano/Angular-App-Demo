@@ -1,5 +1,7 @@
 <!-- bind property to button -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<button class="btn btn-primary" (click)="log($event)">Log event</button>
+
 <p>{{ serverCreationStatus }} </p>
 <p>{{ allowNewServer }} </p>
 <p>{{ 'server' }} with ID {{ serverId }} is {{ serverStatus }} </p>

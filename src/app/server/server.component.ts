@@ -25,4 +25,11 @@ export class ServerComponent {
     onCreateServer() {
         this.serverCreationStatus = "Server was created!"
     }
+
+    // log events of the dom element
+    log(event) {
+        const button = event.target;
+        console.log(button);
+        console.dir(button);
+    }
 }
