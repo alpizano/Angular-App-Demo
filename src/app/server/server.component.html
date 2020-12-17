@@ -1,4 +1,6 @@
 <!-- bind property to button -->
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<p>{{ serverCreationStatus }} </p>
+<p>{{ allowNewServer }} </p>
 <p>{{ 'server' }} with ID {{ serverId }} is {{ serverStatus }} </p>
 <p> Using method {{ getServerStatus() }}</p>

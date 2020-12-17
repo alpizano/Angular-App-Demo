@@ -9,6 +9,7 @@ export class ServerComponent {
     serverId = 10;
     serverStatus: string = 'offline';
     allowNewServer = false;
+    serverCreationStatus = "No server was created!"
 
     // execute at time component is created by angular
     constructor() {
@@ -19,5 +20,9 @@ export class ServerComponent {
 
     getServerStatus() {
         return this.serverStatus;
+    }
+
+    onCreateServer() {
+        this.serverCreationStatus = "Server was created!"
     }
 }
