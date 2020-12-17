@@ -8,6 +8,14 @@ import { Component } from '@angular/core';
 export class ServerComponent {
     serverId = 10;
     serverStatus: string = 'offline';
+    allowNewServer = false;
+
+    // execute at time component is created by angular
+    constructor() {
+        setTimeout( () => {
+            this.allowNewServer = true;
+        },2000);
+    }
 
     getServerStatus() {
         return this.serverStatus;
