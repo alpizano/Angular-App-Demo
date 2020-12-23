@@ -1,8 +1,17 @@
-<!-- bind property to button -->
-<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- bind property to button. "click" is the event on button -->
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
+  Add Server
+</button>
 <button class="btn btn-primary" (click)="log($event)">Log event</button>
 
-<p>{{ serverCreationStatus }} </p>
-<p>{{ allowNewServer }} </p>
-<p>{{ 'server' }} with ID {{ serverId }} is {{ serverStatus }} </p>
-<p> Using method {{ getServerStatus() }}</p>
+<!-- input is fired whenever user types -->
+<input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+{{ serverName }}
+<p>{{ serverCreationStatus }}</p>
+<p>{{ allowNewServer }}</p>
+<p>{{ "server" }} with ID {{ serverId }} is {{ serverStatus }}</p>
+<p>Using method {{ getServerStatus() }}</p>
