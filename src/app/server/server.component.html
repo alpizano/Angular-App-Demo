@@ -11,6 +11,10 @@
 <!-- input is fired whenever user types -->
 <input type="text" class="form-control" (input)="onUpdateServerName($event)" />
 {{ serverName }}
+
+<!-- ngModel is a "directive" -->
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+
 <p>{{ serverCreationStatus }}</p>
 <p>{{ allowNewServer }}</p>
 <p>{{ "server" }} with ID {{ serverId }} is {{ serverStatus }}</p>
