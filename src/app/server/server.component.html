@@ -18,6 +18,8 @@
 <input type="text" class="form-control" [(ngModel)]="serverName" />
 
 <p>{{ serverCreationStatus }}</p>
+<!-- structural directive; changes DOM -->
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
 <p>{{ allowNewServer }}</p>
 <p>{{ "server" }} with ID {{ serverId }} is {{ serverStatus }}</p>
 <p>Using method {{ getServerStatus() }}</p>

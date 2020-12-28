@@ -11,6 +11,7 @@ export class ServerComponent {
   serverCreationStatus = 'No server was created!';
   serverName = 'Testserver';
   userName = '';
+  serverCreated = false;
 
   // execute at time component is created by angular
   constructor() {
@@ -23,7 +24,9 @@ export class ServerComponent {
     return this.serverStatus;
   }
 
+  // when AddServer button is clicked
   onCreateServer() {
+    this.serverCreated = true;
     this.serverCreationStatus = 'Server was created!';
   }
 
