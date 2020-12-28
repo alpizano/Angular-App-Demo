@@ -15,6 +15,7 @@ export class ServerComponent {
 
   // execute at time component is created by angular
   constructor() {
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000);
@@ -22,6 +23,10 @@ export class ServerComponent {
 
   getServerStatus() {
     return this.serverStatus;
+  }
+
+  getColor() {
+    return this.serverStatus === 'online' ? 'green' : 'red';
   }
 
   // when AddServer button is clicked
