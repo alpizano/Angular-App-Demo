@@ -1,4 +1,4 @@
-<!-- bind property to button. "click" is the event on button -->
+<!-- ex. Property binding. bind property to button. "click" is the event on button -->
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
@@ -8,14 +8,17 @@
 </button>
 <button class="btn btn-primary" (click)="log($event)">Log event</button>
 
-<!-- input is fired whenever user types -->
+<!-- ex. Event Binding. input is fired whenever user types.  -->
 <input type="text" class="form-control" (input)="onUpdateServerName($event)" />
 {{ serverName }}
 
-<!-- ngModel is a "directive" -->
+<!-- ex. Two-way binding. ngModel is a "directive" -->
 <input type="text" class="form-control" [(ngModel)]="serverName" />
 
 <p>{{ serverCreationStatus }}</p>
 <p>{{ allowNewServer }}</p>
 <p>{{ "server" }} with ID {{ serverId }} is {{ serverStatus }}</p>
 <p>Using method {{ getServerStatus() }}</p>
+
+<!-- Assignment #2 -->
+<input type="text" class="form-control" />
