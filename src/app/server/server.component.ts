@@ -32,6 +32,18 @@ export class ServerComponent {
     this.userName = event.target.value;
   }
 
+  // should only be clickable () if not empty string
+  isUserNameNull(): boolean {
+    if (this.userName !== '') {
+      return false;
+    }
+    return true;
+  }
+
+  resetUserName(): void {
+    this.userName = '';
+  }
+
   onUpdateServerName(event: any) {
     //this.serverName = (<HTMLInputElement>event.target).value;
     this.serverName = event.target.value;
