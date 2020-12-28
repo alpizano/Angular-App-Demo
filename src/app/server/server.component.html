@@ -26,7 +26,11 @@
   <p>No server was created</p>
 </ng-template>
 <p>{{ allowNewServer }}</p>
-<p [ngStyle]="{ backgroundColor: getColor() }">
+<!-- ngStyle directive (property binding). Uses java object -->
+<p
+  [ngStyle]="{ backgroundColor: getColor() }"
+  [ngClass]="{ online: serverStatus === 'online' }"
+>
   {{ "server" }} with ID {{ serverId }} is {{ serverStatus }}
 </p>
 <p>Using method {{ getServerStatus() }}</p>
