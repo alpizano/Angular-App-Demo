@@ -5,12 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { TestComponent } from './test/test.component';
+import { WarningalertComponent } from './warningalert/warningalert.component';
+import { SuccessalertComponent } from './successalert/successalert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
-    TestComponent
+    TestComponent,
+    WarningalertComponent,
+    SuccessalertComponent
   ],
   imports: [
     BrowserModule,
