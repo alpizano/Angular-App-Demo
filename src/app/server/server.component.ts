@@ -27,6 +27,11 @@ export class ServerComponent {
     this.serverCreationStatus = 'Server was created!';
   }
 
+  // implementing updating username but with event binding
+  onUpdateUserName(event: any) {
+    this.userName = event.target.value;
+  }
+
   onUpdateServerName(event: any) {
     //this.serverName = (<HTMLInputElement>event.target).value;
     this.serverName = event.target.value;
