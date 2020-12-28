@@ -14,13 +14,14 @@ import { SuccessalertComponent } from './successalert/successalert.component';
     ServerComponent,
     TestComponent,
     WarningalertComponent,
-    SuccessalertComponent
+    SuccessalertComponent,
   ],
   imports: [
     BrowserModule,
+    // needed to use NgModule two-way binding
     FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

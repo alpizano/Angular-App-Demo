@@ -9,7 +9,7 @@ export class ServerComponent {
   serverStatus: string = 'offline';
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
-  serverName = 'myServerName';
+  serverName = 'Testserver';
   userName = '';
 
   // execute at time component is created by angular
