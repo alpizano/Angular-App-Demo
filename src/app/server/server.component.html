@@ -9,10 +9,12 @@
 <button class="btn btn-primary" (click)="log($event)">Log event</button>
 
 <!-- ex. Event Binding. input is fired whenever user types.  -->
+<h2>Event Binding</h2>
 <input type="text" class="form-control" (input)="onUpdateServerName($event)" />
 {{ serverName }}
 
 <!-- ex. Two-way binding. ngModel is a "directive" -->
+<h2>Two way binding</h2>
 <input type="text" class="form-control" [(ngModel)]="serverName" />
 
 <p>{{ serverCreationStatus }}</p>
@@ -25,3 +27,4 @@
 <!-- implenting with directive and two-way data binding -->
 <input type="text" class="form-control" [(ngModel)]="userName" />
 {{ userName }}
+<button class="btn btn-primary" (click)="">BUTTON</button>
