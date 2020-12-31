@@ -16,10 +16,14 @@ export class ServersComponent implements OnInit {
   servers = ['Testserver', 'Testserver 2'];
   message: string;
   detailsButtonClicked = false;
+  timeStamps = [];
+  // why doesn't this need to be a static variable?
+  count: number;
 
   // execute at time component is created by angular
   constructor() {
     this.message = 'Secret Password = tuna';
+    this.count = 0;
     // becomes clickable only after 2secs
     // setTimeout(() => {
     //   this.allowNewServer = true;
@@ -37,6 +41,16 @@ export class ServersComponent implements OnInit {
   onDisplayDetails(event: any) {
     if (this.detailsButtonClicked) this.detailsButtonClicked = false;
     else this.detailsButtonClicked = true;
+
+    const timeStamp = Date.now();
+    // push, unshift, pop, shift
+    console.log(timeStamp);
+    this.timeStamps.push(`${timeStamp} with count: ${this.count}`);
+    this.count++;
+  }
+
+  getBgColor() {
+    if (this.count > 5) return 'blue';
   }
 
   // when AddServer button is clicked
@@ -69,7 +83,7 @@ export class ServersComponent implements OnInit {
   }
 
   // log events of the dom element
-  log(event) {
+  log(event: any) {
     const button = event.target;
     console.log(button);
     console.dir(button);
