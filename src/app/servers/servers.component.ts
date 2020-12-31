@@ -14,9 +14,12 @@ export class ServersComponent implements OnInit {
   userName = '';
   serverCreated = false;
   servers = ['Testserver', 'Testserver 2'];
+  message: string;
+  detailsButtonClicked = false;
 
   // execute at time component is created by angular
   constructor() {
+    this.message = 'Secret Password = tuna';
     // becomes clickable only after 2secs
     // setTimeout(() => {
     //   this.allowNewServer = true;
@@ -29,6 +32,11 @@ export class ServersComponent implements OnInit {
 
   getColor() {
     return this.serverStatus === 'online' ? 'green' : 'red';
+  }
+
+  onDisplayDetails(event: any) {
+    if (this.detailsButtonClicked) this.detailsButtonClicked = false;
+    else this.detailsButtonClicked = true;
   }
 
   // when AddServer button is clicked
