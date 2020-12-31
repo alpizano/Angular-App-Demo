@@ -58,10 +58,10 @@
 </button>
 <!-- Displays paragraph if detailsButtonClicked property is true, else removes from DOM -->
 <p *ngIf="detailsButtonClicked">Secret Password = tuna</p>
-<p
-  [ngStyle]="{ backgroundColor: getBgColor() }"
-  [ngClass]="{ five: count > 5 }"
-  *ngFor="let val of timeStamps"
+<div
+  [ngStyle]="{ backgroundColor: getBgColor(i) }"
+  [ngClass]="{ five: i > 5 }"
+  *ngFor="let logItem of timeStamps; let i = index"
 >
-  {{ val }}
-</p>
+  {{ logItem }}
+</div>

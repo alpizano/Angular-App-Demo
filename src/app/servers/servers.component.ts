@@ -42,15 +42,15 @@ export class ServersComponent implements OnInit {
     if (this.detailsButtonClicked) this.detailsButtonClicked = false;
     else this.detailsButtonClicked = true;
 
-    const timeStamp = Date.now();
+    const timeStamp = new Date();
     // push, unshift, pop, shift
     console.log(timeStamp);
-    this.timeStamps.push(`${timeStamp} with count: ${this.count}`);
+    this.timeStamps.push(`${this.count}: timestamp - ${timeStamp}`);
     this.count++;
   }
 
-  getBgColor() {
-    if (this.count > 5) return 'blue';
+  getBgColor(index: number): string {
+    return index > 5 ? 'blue' : 'transparent';
   }
 
   // when AddServer button is clicked
